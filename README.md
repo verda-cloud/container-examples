@@ -1,5 +1,5 @@
 # container-examples
 
-Examples of Docker containers compatible with DataCrunch Containers.
+Examples of Docker containers compatible with Verda Containers.
 
-See [DataCrunch Containeres Docs](https://docs.datacrunch.io/containers/overview) for more info.
+See [Verda Containeres Docs](https://docs.verda.com/containers/overview) for more info.
