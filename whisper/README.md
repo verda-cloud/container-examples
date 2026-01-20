@@ -1,11 +1,11 @@
 # Whisper Container
 
-Here is an example of fully operational [Whisper-large-v3-turbo](https://huggingface.co/openai/whisper-large-v3-turbo) endpoint containerized for use with DataCrunch containers.
+Here is an example of fully operational [Whisper-large-v3-turbo](https://huggingface.co/openai/whisper-large-v3-turbo) endpoint containerized for use with Verda containers.
 
 This container implements two endpoints:
 
 * `/generate` - a standard Whisper speech-to-text endpoint
-* `/health` - health-check on the container used by DataCrunch Containers to make sure the container us running and healthy.
+* `/health` - health-check on the container used by Verda Containers to make sure the container us running and healthy.
 
 Build:
 
@@ -18,13 +18,13 @@ Push to a Docker registry:
 docker push $YOUR_REGISTRY/whisper:v1
 ```
 
-When the container starts, it will fetch the model weights from Hugging Face. Therefore, to run the container you will need to supply your [Hugging Face User access token](https://huggingface.co/docs/hub/en/security-tokens) as an environment variable `HF_TOKEN`. This can be easily done via DataCrunch Containers UI.
+When the container starts, it will fetch the model weights from Hugging Face. Therefore, to run the container you will need to supply your [Hugging Face User access token](https://huggingface.co/docs/hub/en/security-tokens) as an environment variable `HF_TOKEN`. This can be easily done via Verda Containers UI.
 
-Once the container has been deployed on DataCrunch, and the endpoint is runnning, you can testing by running the following, which will send the `audio.wav` file to the endpoint for transcription:
+Once the container has been deployed on Verda, and the endpoint is runnning, you can test it by running the following, which will send the `audio.wav` file to the endpoint for transcription:
 
 ```bash
-export DATACRUNCH_CONTAINER_URL=https://containers.datacrunch.io/<NAME_OF_YOUR_DEPLOYMENT>/generate
-export DATACRUNCH_BEARER_TOKEN=dc_<YOUR_BEARER_TOKEN>
+export VERDA_CONTAINER_URL=https://containers.datacrunch.io/<NAME_OF_YOUR_DEPLOYMENT>/generate
+export VERDA_BEARER_TOKEN=dc_<YOUR_BEARER_TOKEN>
 
 ./inference.sh
 ```
