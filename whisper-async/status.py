@@ -4,9 +4,9 @@ import os
 import signal
 
 def get_status() -> None:
-    token = os.environ['DATACRUNCH_BEARER_TOKEN']
-    deployment_name = os.environ['DATACRUNCH_DEPLOYMENT']
-    async_task_id = os.environ['DATACRUNCH_TASK_ID']
+    token = os.environ['VERDA_BEARER_TOKEN']
+    deployment_name = os.environ['VERDA_DEPLOYMENT']
+    async_task_id = os.environ['VERDA_TASK_ID']
     baseurl = "https://containers.datacrunch.io"
     result_url = f"{baseurl}/status/{deployment_name}"
 

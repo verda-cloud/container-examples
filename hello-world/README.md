@@ -1,6 +1,6 @@
 # Hello World! Container
 
-Here is an example of a simple container compatible with DataCrunch serverless containers.
+Here is an example of a simple container compatible with Verda serverless containers.
 
 Build:
 
@@ -23,7 +23,7 @@ Depending on whether you have a GPU available this  will give you the following 
 {"message":"Hello world, I can run on cpu|gpu!"}
 ```
 
-To make the container available to DataCrunch Containers, it needs to be pushed to a Docker registry:
+To make the container available to Verda Containers, it needs to be pushed to a Docker registry:
 ```bash
 docker push $YOUR_REGISTRY/hello-world:v1
 ```

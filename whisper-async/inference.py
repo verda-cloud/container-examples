@@ -4,8 +4,8 @@ import os
 import signal
 
 def do_test_request() -> None:
-    token = os.environ['DATACRUNCH_BEARER_TOKEN']
-    deployment_name = os.environ['DATACRUNCH_DEPLOYMENT']
+    token = os.environ['VERDA_BEARER_TOKEN']
+    deployment_name = os.environ['VERDA_DEPLOYMENT']
     baseurl = "https://containers.datacrunch.io"
     inference_url = f"{baseurl}/{deployment_name}/generate"
 

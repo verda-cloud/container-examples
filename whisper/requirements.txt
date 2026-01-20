@@ -1,8 +1,8 @@
 fastapi==0.115.12
 uvicorn==0.34.2
-torch==2.6.0
-torchaudio==2.6.0
-transformers==4.51.3
+torch==2.9.0
+torchaudio==2.9.0
+transformers==4.53.0
 soundfile==0.13.1
 safetensors==0.5.3
 accelerate==1.6.0
